@@ -8,7 +8,18 @@
     android:orientation="vertical"
     tools:context="com.example.alfatih.project_01.MainActivity">
 
+    <TextView
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="project 30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <ImageView
+        android:padding="60dp"
         android:src="@drawable/logo"
         android:layout_weight="1"
         android:layout_width="match_parent"
