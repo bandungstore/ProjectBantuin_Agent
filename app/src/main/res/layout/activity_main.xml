@@ -15,12 +15,14 @@
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/email_et"
         android:layout_width="match_parent"
         android:hint="Email"
         android:layout_height="wrap_content" />
 
 
     <EditText
+        android:id="@+id/password_et"
         android:layout_width="match_parent"
         android:hint="Password"
         android:layout_height="wrap_content" />
