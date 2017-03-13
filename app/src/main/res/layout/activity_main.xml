@@ -26,25 +26,26 @@
         android:layout_height="wrap_content" />
 
     <EditText
-        android:id="@+id/email_et"
+        android:id="@+id/usernameLogin"
         android:layout_width="match_parent"
-        android:hint="Email"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="Username" />
 
 
     <EditText
-        android:id="@+id/password_et"
-        android:layout_width="match_parent"
-        android:hint="Password"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/passwordLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick=""
-        android:text="sign in"/>
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="loginOnClick"
+        android:text="sign in" />
 
     <TextView
         android:text="Forgot Password ?"
