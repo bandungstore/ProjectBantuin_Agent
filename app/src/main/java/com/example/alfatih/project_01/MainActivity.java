@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity  {
                 //String name = jsonObject.getString("name");
                 //AdapterUser.setName(name);
                 Toast.makeText(getBaseContext(), "Berhasil Login" + tipe +" " + id_Agent, Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(this, Main2Activity.class);
+                Intent intent = new Intent(this, HomeAgent.class);
                 finish();
                 startActivity(intent);
                // startActivity(new Intent(getBaseContext(), Home.class));
