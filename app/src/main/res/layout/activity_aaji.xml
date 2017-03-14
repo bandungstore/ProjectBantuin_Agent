@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_jfk"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.alfatih.project_01.JFK">
+
+    <TextView
+        android:text="Nama Calon Agrn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="Tanggal AAJI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:inputType="date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:text="Detail Catatan Nasabah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:text="Nama"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text=":"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:text="Agung Cahya Gumilar"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:text="Usia"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text=":"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:text="Agung Cahya Gumilar"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:text="Telepon"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text=":"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:text="Agung Cahya Gumilar"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:text="Pekerjaan"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text=":"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:text="Agung Cahya Gumilar"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:text="Sumber"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text=":"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:text="Agung Cahya Gumilar"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="9"
+                android:layout_width="0dp"
+                android:text="Alamat"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text=":"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:text="Agung Cahya Gumilar"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

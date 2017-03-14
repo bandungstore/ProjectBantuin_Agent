@@ -27,7 +27,17 @@
         </activity>
         <activity android:name=".HomeAgent" />
         <activity android:name=".Rekrut" />
-        <activity android:name=".Prospek"></activity>
+        <activity android:name=".Prospek" />
+        <activity android:name=".JFK" />
+        <activity android:name=".FollowUp" />
+        <activity android:name=".ServisNasabah" />
+        <activity android:name=".Training" />
+        <activity android:name=".Meeting" />
+        <activity android:name=".Approaching" />
+        <activity android:name=".SelfMonitoring" />
+        <activity android:name=".AgentMonitoring" />
+        <activity android:name=".Closing" />
+        <activity android:name=".AAJI"></activity>
     </application>
 
 </manifest>
