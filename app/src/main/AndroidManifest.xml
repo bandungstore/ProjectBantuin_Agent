@@ -26,7 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeAgent" />
-        <activity android:name=".Rekrut"></activity>
+        <activity android:name=".Rekrut" />
+        <activity android:name=".Prospek"></activity>
     </application>
 
 </manifest>
