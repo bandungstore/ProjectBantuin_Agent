@@ -12,143 +12,74 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button"
-        android:id="@+id/textView5" />
+        android:layout_toRightOf="@+id/jarak"
+        android:layout_toEndOf="@+id/jarak"
+        android:id="@+id/pekerjaan" />
 
     <TextView
         android:text="Nama Lengkap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView5"
-        android:layout_alignLeft="@+id/textView5"
-        android:layout_alignStart="@+id/textView5"
-        android:id="@+id/textView6" />
+        android:layout_above="@+id/pekerjaan"
+        android:layout_alignLeft="@+id/pekerjaan"
+        android:layout_alignStart="@+id/pekerjaan"
+        android:id="@+id/nama_lengkap" />
 
     <TextView
-        android:text="ID Agen"
+        android:id="@+id/ID_agent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView7"
-        android:layout_above="@+id/textView6"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignStart="@+id/textView6" />
+        android:layout_above="@+id/nama_lengkap"
+        android:layout_alignLeft="@+id/nama_lengkap"
+        android:layout_alignStart="@+id/nama_lengkap"
+        android:text="ID Agen" />
 
     <Button
-        android:text="Monitoring"
+        android:id="@+id/buttonTimeTable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button7"
+        android:text="Time Table"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Closing/AAJI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button8"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="27dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="Training/Meeting"
+        android:id="@+id/jarak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button5"
-        android:layout_above="@+id/button7"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="jarak"
+        android:visibility="invisible" />
 
-    <Button
-        android:text="Approaching"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button6"
-        android:layout_above="@+id/button8"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
-    <Button
-        android:text="JFK/Follow Up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_above="@+id/button5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Services Nasabah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button4"
-        android:layout_above="@+id/button6"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="Rekrut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_above="@+id/button3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="Prospek"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_above="@+id/button4"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <com.jjoe64.graphview.GraphView
-        android:layout_width="wrap_content"
-        android:layout_height="200dip"
-        android:id="@+id/graph"
-        android:layout_above="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:theme="?attr/actionBarTheme"
-        android:minHeight="?attr/actionBarSize"
-        android:id="@+id/toolbar"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="Agen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:layout_below="@+id/toolbar"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
         android:layout_marginTop="15dp" />
 
     <TextView
-        android:text="Point"
+        android:id="@+id/point"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_above="@+id/textView6"
-        android:layout_alignLeft="@+id/textView8"
-        android:layout_alignStart="@+id/textView8" />
+        android:layout_above="@+id/nama_lengkap"
+        android:layout_alignLeft="@+id/kegiatan"
+        android:layout_alignStart="@+id/kegiatan"
+        android:text="Point" />
 
     <TextView
         android:text="Tanggal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView8"
+        android:id="@+id/kegiatan"
         android:layout_marginRight="12dp"
         android:layout_marginEnd="12dp"
         android:layout_alignBaseline="@+id/textView"
@@ -164,9 +95,38 @@
         android:layout_marginRight="17dp"
         android:layout_marginEnd="17dp"
         android:layout_below="@+id/textView"
-        android:layout_toLeftOf="@+id/textView6"
-        android:layout_toStartOf="@+id/textView6"
+        android:layout_toLeftOf="@+id/nama_lengkap"
+        android:layout_toStartOf="@+id/nama_lengkap"
         android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pekerjaan"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/buttonTimeTable">
+
+        <com.jjoe64.graphview.GraphView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/graph"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonTimeTable"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="23dp"
+        android:text="Button"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>

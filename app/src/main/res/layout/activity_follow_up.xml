@@ -4,10 +4,10 @@
     android:id="@+id/activity_jfk"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     android:orientation="vertical"
     tools:context="com.example.alfatih.project_01.JFK">
 
@@ -17,18 +17,24 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
     <TextView
         android:text="Tanggal Follow Up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
-        android:inputType="date"
+        android:id="@+id/kegiatan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:inputType="date" />
 
     <TextView
         android:text="Keterangan"
@@ -36,8 +42,9 @@
         android:layout_height="wrap_content" />
 
     <EditText
+        android:id="@+id/keterangan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 
     <TextView
@@ -65,10 +72,11 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_weight="20"
+                android:id="@+id/nama"
                 android:layout_width="0dp"
-                android:text="Agung Cahya Gumilar"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:text="Agung Cahya Gumilar" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -86,10 +94,11 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_weight="20"
+                android:id="@+id/tanggal_lahir"
                 android:layout_width="0dp"
-                android:text="Agung Cahya Gumilar"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:text="Agung Cahya Gumilar" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -107,10 +116,11 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_weight="20"
+                android:id="@+id/telepon"
                 android:layout_width="0dp"
-                android:text="Agung Cahya Gumilar"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:text="Agung Cahya Gumilar" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,10 +138,11 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_weight="20"
+                android:id="@+id/pekerjaan"
                 android:layout_width="0dp"
-                android:text="Agung Cahya Gumilar"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:text="Agung Cahya Gumilar" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -149,10 +160,11 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_weight="20"
+                android:id="@+id/sumber"
                 android:layout_width="0dp"
-                android:text="Agung Cahya Gumilar"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:text="Agung Cahya Gumilar" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -170,10 +182,11 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_weight="20"
+                android:id="@+id/alamat"
                 android:layout_width="0dp"
-                android:text="Agung Cahya Gumilar"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:text="Agung Cahya Gumilar" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -191,11 +204,18 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_weight="20"
+                android:id="@+id/solusi"
                 android:layout_width="0dp"
-                android:text="Agung Cahya Gumilar"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:text="Agung Cahya Gumilar" />
         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="selesaiOnClick"
+            android:text="Selesai" />
     </LinearLayout>
 
 </LinearLayout>

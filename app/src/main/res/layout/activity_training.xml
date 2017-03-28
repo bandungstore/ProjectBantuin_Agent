@@ -7,22 +7,14 @@
     android:orientation="vertical"
     tools:context="com.example.alfatih.project_01.Training">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:theme="?attr/actionBarTheme"
-        android:minHeight="?attr/actionBarSize"
-        android:id="@+id/toolbar3" />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -34,54 +26,68 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <CheckBox
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="wrap_content"
-            android:text="Mengikuti Training"/>
 
-        <CheckBox
-            android:layout_width="0dp"
-            android:layout_weight="2"
+        <RadioGroup
+            android:id="@+id/radiogroup1"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Mengajar Di Kelas"/>
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:text="Mengikuti Training" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mengajar Di Kelas" />
+        </RadioGroup>
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Training"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Orang yang Hadir" />
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/jumlahhadir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
 
-    </Spinner>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Training" />
 
-    <TextView
-        android:text="Tanggal Training"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/tanggal_training"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:inputType="date" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="date"/>
-
-    <TextView
+        <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tempat"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/tempat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <Button
-        android:text="Selesai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="selesaiOnClick"
+            android:text="Selesai" />
 
 
     </LinearLayout>

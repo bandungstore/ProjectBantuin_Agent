@@ -11,32 +11,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:theme="?attr/actionBarTheme"
-            android:minHeight="?attr/actionBarSize"
-            android:id="@+id/toolbar2" />
-
         <LinearLayout
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Calon Agen"
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2" />
+                android:text="Calon Nasabah" />
 
             <EditText
+                android:id="@+id/calonnasabah"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:text="Telepon"
@@ -44,29 +37,15 @@
                 android:layout_height="wrap_content" />
 
             <EditText
-                android:inputType="phone"
+                android:id="@+id/telepon"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <TextView
+                android:text="Tanggal Lahir"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:text="Laki - laki"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
-
-                <CheckBox
-                    android:text="Perempuan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
-
-            </LinearLayout>
-
+                android:layout_height="wrap_content" />
             <EditText
                 android:id="@+id/datePickerPopUp"
                 android:inputType="date"
@@ -77,20 +56,57 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioGroup
+                    android:id="@+id/radiogroup1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="141dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.08"
+                        android:text="Laki - Laki" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="141dp"
+                        android:layout_height="wrap_content"
+                        android:text="Perempuan" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
                 android:layout_marginBottom="20dp"
                 android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:text="Lajang"
-                    android:layout_width="wrap_content"
+                <RadioGroup
+                    android:id="@+id/radiogroup2"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
-                <CheckBox
-                    android:text="Menikah"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="141dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.08"
+                        android:text="Lajang" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="141dp"
+                        android:layout_height="wrap_content"
+                        android:text="Menikah" />
+                </RadioGroup>
 
 
             </LinearLayout>
@@ -102,9 +118,10 @@
                 android:text="Jumlah Anak"/>
 
             <EditText
+                android:id="@+id/jumlahanak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="number" />
 
 
             <TextView
@@ -113,6 +130,7 @@
                 android:text="Sumber Nama"/>
 
             <EditText
+                android:id="@+id/sumbernama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -123,6 +141,7 @@
                 android:text="Pekerjaan"/>
 
             <EditText
+                android:id="@+id/pekerjaan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -133,6 +152,7 @@
                 android:text="Alamat"/>
 
             <EditText
+                android:id="@+id/alamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -143,14 +163,15 @@
                 android:text="Keterangan"/>
 
             <EditText
+                android:id="@+id/keterangan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Selesai"
-                />
+                android:onClick="selesaiOnClick"
+                android:text="Selesai" />
 
         </LinearLayout>
     </LinearLayout>

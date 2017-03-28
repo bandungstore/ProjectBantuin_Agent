@@ -1,4 +1,4 @@
-package com.example.alfatih.project_01;
+package com.example.alfatih.project_01.Database;
 
 /**
  * Created by ACER V5 on 3/13/2017.

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/rekrut"
+        android:title="Rekrut"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/prospek"
+        android:title="Prospek"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/jfk"
+        android:title="JFK"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/followup"
+        android:title="Follow Up"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/servisnasabah"
+        android:title="Servis Nasabah"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/training"
+        android:title="Training"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/meeting"
+        android:title="Meeting"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/approaching"
+        android:title="Approaching"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/monitoring"
+        android:title="Monitoring"
+        app:showAsAction="never"/>
+
+
+    <item
+        android:id="@+id/closing"
+        android:title="Closing"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/aaji"
+        android:title="AAJI"
+        app:showAsAction="never"/>
+
+
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+        android:icon="@drawable/logout"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/batas"
+        android:title="batas"
+        android:icon="@drawable/batas"
+        app:showAsAction="always"/>
+</menu>
