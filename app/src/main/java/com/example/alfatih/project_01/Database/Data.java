@@ -162,4 +162,24 @@ public class Data extends Koneksi {
         }
         return response;
     }
+
+    public String getTimeTable(int id_agent, String hari, int minggu, String tipe) {
+        try {
+            url = URL + "?operasi=getTimeTable&id_agent=" + id_agent+ "&hari=" + hari+ "&minggu=" + minggu+ "&tipe=" + tipe;
+            System.out.println("URL Insert Biodata : " + url);
+            response = call(url);
+        } catch (Exception e) {
+        }
+        return response;
+    }
+
+    public String getAllDataAgent() {
+        try {
+            url = URL + "?operasi=getAllDataAgent";
+            System.out.println("URL Insert Biodata : " + url);
+            response = call(url);
+        } catch (Exception e) {
+        }
+        return response;
+    }
 }

@@ -16,11 +16,13 @@ import android.widget.Toast;
 
 import com.example.alfatih.project_01.Database.DBadapter;
 import com.example.alfatih.project_01.Database.Data;
+import com.example.alfatih.project_01.TimeTable.TimeTable;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -49,8 +51,8 @@ public class AAJI extends AppCompatActivity {
     TextView Pekerjaan;
     TextView Sumber_Nama;
     TextView Alamat;
+    java.text.SimpleDateFormat currentDate;
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +72,7 @@ public class AAJI extends AppCompatActivity {
         openDB();
         wp = myDB.getAgent(String.valueOf(1));
 
-        SimpleDateFormat currentDate = new SimpleDateFormat("dd-MM-yyyy");
+        currentDate = new java.text.SimpleDateFormat("dd-MM-yyyy");
         Date todayDate = new Date();
         String thisDate = currentDate.format(todayDate);
 
@@ -127,7 +129,7 @@ public class AAJI extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, HomeAgent.class);
+        Intent intent = new Intent(this, TimeTable.class);
         finish();
         startActivity(intent);
     }
@@ -137,7 +139,7 @@ public class AAJI extends AppCompatActivity {
         myDB.open();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
+
     public void selesaiOnClick(View view) {
 
         if( spinner.getSelectedItem().toString().trim().equals("")){
@@ -147,7 +149,7 @@ public class AAJI extends AppCompatActivity {
             Date d = new Date();
             String dayOfTheWeek = sdf.format(d);
 
-            SimpleDateFormat currentDate = new SimpleDateFormat("yyyy-MM-dd");
+            currentDate = new java.text.SimpleDateFormat("yyyy-MM-dd");
             Date todayDate = new Date();
             String thisDate = currentDate.format(todayDate);
 

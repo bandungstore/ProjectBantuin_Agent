@@ -5,128 +5,122 @@
     android:id="@+id/activity_home_agent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F6F6"
     tools:context="com.example.alfatih.project_01.HomeAgent">
 
     <TextView
         android:text="Pekerjaan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_toRightOf="@+id/jarak"
-        android:layout_toEndOf="@+id/jarak"
-        android:id="@+id/pekerjaan" />
+        android:id="@+id/pekerjaan"
+        android:layout_below="@+id/nama_lengkap"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="12dp"/>
 
     <TextView
         android:text="Nama Lengkap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/pekerjaan"
-        android:layout_alignLeft="@+id/pekerjaan"
-        android:layout_alignStart="@+id/pekerjaan"
-        android:id="@+id/nama_lengkap" />
+        android:id="@+id/nama_lengkap"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/ID_agent"
+        android:layout_alignLeft="@+id/ID_agent"
+        android:layout_alignStart="@+id/ID_agent" />
 
     <TextView
         android:id="@+id/ID_agent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/nama_lengkap"
-        android:layout_alignLeft="@+id/nama_lengkap"
-        android:layout_alignStart="@+id/nama_lengkap"
-        android:text="ID Agen" />
+        android:text="ID Agen"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/pekerjaan"
+        android:layout_alignStart="@+id/pekerjaan" />
 
     <Button
         android:id="@+id/buttonTimeTable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time Table"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="27dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:onClick="timetableOnClick"
+        android:text="Time Table" />
 
-    <Button
-        android:id="@+id/jarak"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:text="jarak"
-        android:visibility="invisible" />
 
 
 
     <TextView
-        android:text="Agen"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="2dp" />
 
     <TextView
         android:id="@+id/point"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/nama_lengkap"
+        android:text="Point"
+        android:layout_alignBaseline="@+id/nama_lengkap"
+        android:layout_alignBottom="@+id/nama_lengkap"
         android:layout_alignLeft="@+id/kegiatan"
-        android:layout_alignStart="@+id/kegiatan"
-        android:text="Point" />
+        android:layout_alignStart="@+id/kegiatan" />
 
     <TextView
         android:text="Tanggal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/kegiatan"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_below="@+id/textView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:id="@+id/imageView"
-        android:layout_marginRight="17dp"
-        android:layout_marginEnd="17dp"
-        android:layout_below="@+id/textView"
-        android:layout_toLeftOf="@+id/nama_lengkap"
-        android:layout_toStartOf="@+id/nama_lengkap"
-        android:layout_marginTop="16dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/man"
+        android:layout_below="@+id/point"
+        android:layout_centerHorizontal="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/pekerjaan"
-        android:layout_marginTop="100dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="100dp"
         android:orientation="horizontal"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/buttonTimeTable">
+        android:layout_above="@+id/buttonTimeTable"
+        android:id="@+id/linearLayout">
 
         <com.jjoe64.graphview.GraphView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/graph"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonTimeTable"
+        android:text="Button"
+        android:visibility="invisible"
+        android:layout_below="@+id/linearLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="23dp"
-        android:text="Button"
-        android:visibility="invisible" />
+        android:layout_marginTop="38dp" />
 
 
 </RelativeLayout>

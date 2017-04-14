@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.alfatih.project_01.TimeTable.TimeTable;
+
 public class SelfMonitoring extends AppCompatActivity {
 
     @Override
@@ -14,7 +16,7 @@ public class SelfMonitoring extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, HomeAgent.class);
+        Intent intent = new Intent(this, TimeTable.class);
         finish();
         startActivity(intent);
     }

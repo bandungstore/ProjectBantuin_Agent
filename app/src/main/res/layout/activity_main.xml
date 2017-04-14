@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:orientation="vertical"
+    android:background="#F4F6F6"
     tools:context="com.example.alfatih.project_01.MainActivity">
 
     <TextView
@@ -19,10 +20,11 @@
 
     <ImageView
         android:padding="60dp"
-        android:src="@drawable/logo"
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/titans"
+        />
 
     <EditText
         android:id="@+id/usernameLogin"
@@ -62,16 +64,9 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Don't have an account ?"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:textAllCaps="true"
-            android:text=" sign up"
-            android:onClick=""
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Don't have an account ? SIGN UP" />
 
     </LinearLayout>
 

@@ -9,7 +9,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/titans"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -36,9 +36,13 @@
         <activity
             android:name=".Admin"
             android:label="@string/title_activity_admin"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".TimeTable.TimeTable" />
+        <activity android:name=".TimeTable.Senin" />
+        <activity android:name=".DaftarAgent" />
+        <activity android:name=".CalonAgent" />
+        <activity android:name=".CalonNasabah" />
+        <activity android:name=".BuatAkun"></activity>
     </application>
 
 </manifest>

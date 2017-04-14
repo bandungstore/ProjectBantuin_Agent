@@ -18,6 +18,17 @@ public class DBadapter {
         public String nama;
         public int stats;
         public String tipe;
+        public int minggu;
+
+        public int getMinggu() {
+            return minggu;
+        }
+
+        public void setMinggu(int minggu) {
+            this.minggu = minggu;
+        }
+
+
 
         public void setId(int id){
             this.id = id;
@@ -48,8 +59,9 @@ public class DBadapter {
     public static final String KEY_Name = "Name";
     public static final String stats = "ID_Agent";
     public static final String tipe = "Tipe";
+    public static final String minggus = "Minggu";
 
-    public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_Name,stats};
+    public static final String[] ALL_KEYS = new String[] {KEY_ROWID, KEY_Name,stats,tipe,minggus};
 
 
     // Info database:
@@ -63,7 +75,8 @@ public class DBadapter {
                     + " (" + KEY_ROWID + " INTEGER PRIMARY KEY, "
                     + KEY_Name + " TEXT NOT NULL, "
                     + stats + " INT NOT NULL, "
-                    + tipe + " TEXT NOT NULL "
+                    + tipe + " TEXT NOT NULL, "
+                    + minggus + " INT NOT NULL "
                     + ");";
 
 
@@ -89,11 +102,12 @@ public class DBadapter {
     }
 
     // Insert ke database.
-    public long insertRow(String name, int statz, String tipez) {
+    public long insertRow(String name, int statz, String tipez, int mingguz) {
         ContentValues newValues = new ContentValues();
         newValues.put(KEY_Name, name);
         newValues.put(stats, statz);
         newValues.put(tipe, tipez);
+        newValues.put(minggus, mingguz);
         //initialValues.put(KEY_DATE, date);
 
         // Menambah data ke database
@@ -118,13 +132,13 @@ public class DBadapter {
 
 
     // Change an existing row to be equal to new data.
-    public boolean updateRow(long rowId, String name, int statz ,String tipez) {
+    public boolean updateRow(long rowId, String name, int statz ,String tipez, int mingguz) {
         String where = KEY_ROWID + "=" + rowId;
         ContentValues newValues = new ContentValues();
         newValues.put(KEY_Name, name);
         newValues.put(stats, statz);
         newValues.put(tipe, tipez);
-
+        newValues.put(minggus, mingguz);
         // Insert it into the database.
         return db.update(DATABASE_TABLE, newValues, where, null) != 0;
     }
@@ -132,7 +146,7 @@ public class DBadapter {
     public Agent getAgent(String id){
         Cursor cur = null;
         Agent T = new Agent();
-        String[] cols = new String[]{KEY_ROWID,KEY_Name,  stats,tipe};
+        String[] cols = new String[]{KEY_ROWID,KEY_Name,  stats,tipe,minggus};
 
         String[] param = {id};
         cur = db.query("Agent",cols,"_id=?",param,null,null,null);
@@ -143,6 +157,7 @@ public class DBadapter {
             T.nama = cur.getString(1);
             T.stats = cur.getInt(2);
             T.tipe = cur.getString(3);
+            T.minggu = cur.getInt(4);
         }
 
         return T;
@@ -157,7 +172,7 @@ public class DBadapter {
         @Override
         public void onCreate(SQLiteDatabase _db) {
             _db.execSQL(DATABASE_CREATE_SQL);
-            _db.execSQL("INSERT INTO " + DATABASE_TABLE + " VALUES (1, 'siapa', 0,'tipe')");
+            _db.execSQL("INSERT INTO " + DATABASE_TABLE + " VALUES (1, 'siapa', 0,'tipe', 0)");
         }
 
         @Override

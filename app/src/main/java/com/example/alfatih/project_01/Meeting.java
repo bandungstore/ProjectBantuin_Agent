@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.alfatih.project_01.Database.DBadapter;
 import com.example.alfatih.project_01.Database.Data;
+import com.example.alfatih.project_01.TimeTable.TimeTable;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,7 +24,7 @@ public class Meeting extends AppCompatActivity {
     String jenis;
     EditText tanggal;
     EditText tempat;
-    SimpleDateFormat currentDate;
+    java.text.SimpleDateFormat currentDate;
     String thisDate;
     Data data = new Data();
     DBadapter myDB;
@@ -39,7 +40,7 @@ public class Meeting extends AppCompatActivity {
         tempat = (EditText)findViewById(R.id.tempat);
 
         // Set Tanggal
-        currentDate = new SimpleDateFormat("dd-MM-yyyy");
+        currentDate = new java.text.SimpleDateFormat("dd-MM-yyyy");
         Date todayDate = new Date();
         thisDate = currentDate.format(todayDate);
         tanggal.setText(thisDate);
@@ -67,12 +68,12 @@ public class Meeting extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, HomeAgent.class);
+        Intent intent = new Intent(this, TimeTable.class);
         finish();
         startActivity(intent);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
+
     public void selesaiOnClick(View view) {
 
         if( jenis.equalsIgnoreCase("")) {
@@ -85,7 +86,7 @@ public class Meeting extends AppCompatActivity {
             Date d = new Date();
             String dayOfTheWeek = sdf.format(d);
 
-            android.icu.text.SimpleDateFormat currentDate = new android.icu.text.SimpleDateFormat("yyyy-MM-dd");
+            currentDate = new java.text.SimpleDateFormat("yyyy-MM-dd");
             Date todayDate = new Date();
             String thisDate = currentDate.format(todayDate);
 

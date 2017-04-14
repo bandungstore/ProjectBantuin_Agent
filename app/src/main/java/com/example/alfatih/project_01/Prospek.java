@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.alfatih.project_01.Database.DBadapter;
 import com.example.alfatih.project_01.Database.Data;
+import com.example.alfatih.project_01.TimeTable.TimeTable;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -36,7 +37,7 @@ public class Prospek extends AppCompatActivity {
     Data data = new Data();
     String thisDate;
     private DatePickerDialog fromDatePickerDialog;
-    SimpleDateFormat currentDate;
+    java.text.SimpleDateFormat currentDate;
 
     DBadapter myDB;
     DBadapter.Agent wp;
@@ -61,7 +62,7 @@ public class Prospek extends AppCompatActivity {
         keterangan = (EditText)findViewById(R.id.keterangan);
 
         // Set Tanggal
-        currentDate = new SimpleDateFormat("yyyy-MM-dd");
+        currentDate = new java.text.SimpleDateFormat("yyyy-MM-dd");
         Date todayDate = new Date();
         thisDate = currentDate.format(todayDate);
         datePicker.setText(thisDate);
@@ -105,7 +106,7 @@ public class Prospek extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, HomeAgent.class);
+        Intent intent = new Intent(this, TimeTable.class);
         finish();
         startActivity(intent);
     }

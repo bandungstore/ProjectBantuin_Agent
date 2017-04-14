@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.alfatih.project_01.TimeTable1">
+
+    <item
+        android:id="@+id/mingguini"
+        android:orderInCategory="100"
+        android:title="Minggu Ini"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/minggu1lalu"
+        android:orderInCategory="100"
+        android:title="1 Minggu Lalu"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/minggu2lalu"
+        android:orderInCategory="100"
+        android:title="2 Minggu Lalu"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/minggu3lalu"
+        android:orderInCategory="100"
+        android:title="3 Minggu Lalu"
+        app:showAsAction="never" />
+</menu>

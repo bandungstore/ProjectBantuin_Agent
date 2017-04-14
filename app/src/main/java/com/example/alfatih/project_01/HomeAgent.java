@@ -3,17 +3,20 @@ package com.example.alfatih.project_01;
 import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.os.Build;
+import android.os.StrictMode;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.alfatih.project_01.Database.DBadapter;
 import com.example.alfatih.project_01.Database.Data;
+import com.example.alfatih.project_01.TimeTable.TimeTable;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
@@ -43,8 +46,9 @@ public class HomeAgent extends AppCompatActivity {
     TextView Pekerjaan;
     TextView Point;
     TextView Tanggal;
+    java.text.SimpleDateFormat currentDate;
+    String thisDate;
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,9 +62,19 @@ public class HomeAgent extends AppCompatActivity {
         Toast.makeText(getBaseContext(), "Selamat Datang "+ wp.getNama(), Toast.LENGTH_LONG).show();
 
         // Set Tanggal
-        SimpleDateFormat currentDate = new SimpleDateFormat("dd/MM/yyyy");
+       // SimpleDateFormat currentDate = new SimpleDateFormat("dd/MM/yyyy");
+        //Date todayDate = new Date();
+       // String thisDate = currentDate.format(todayDate);
+        // Set Tanggal
+        currentDate = new java.text.SimpleDateFormat("dd-MM-yyyy");
         Date todayDate = new Date();
-        String thisDate = currentDate.format(todayDate);
+        thisDate = currentDate.format(todayDate);
+
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
+                    .permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
 
         ID_Agent = (TextView)findViewById(R.id.ID_agent);
         Nama_Lengkap = (TextView)findViewById(R.id.nama_lengkap);
@@ -72,7 +86,7 @@ public class HomeAgent extends AppCompatActivity {
         Nama_Lengkap.setText(namaAgent);
         Pekerjaan.setText(pekerjaanAgent);
         Point.setText(String.valueOf("Point :" + pointAgent));
-        Tanggal.setText(thisDate);
+       Tanggal.setText(thisDate);
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
@@ -132,7 +146,6 @@ public class HomeAgent extends AppCompatActivity {
         inflater.inflate(R.menu.menu,menu);
 
 
-
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -141,7 +154,7 @@ public class HomeAgent extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent;
         switch(item.getItemId()){
-            case R.id.rekrut:
+            /*case R.id.rekrut:
                 intent = new Intent(this, Rekrut.class);
                 finish();
                 startActivity(intent);
@@ -195,11 +208,26 @@ public class HomeAgent extends AppCompatActivity {
                 intent = new Intent(this, AAJI.class);
                 finish();
                 startActivity(intent);
+                return true;*/
+            case R.id.logout:
+                intent = new Intent(this, MainActivity.class);
+                finish();
+                myDB.updateRow(1,"siapa",0,"tipe",0);
+                Toast.makeText(getBaseContext(), "Logout berhasil", Toast.LENGTH_LONG).show();
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    public void timetableOnClick(View view) {
+        myDB.updateRow(1,wp.getNama(),wp.getStats(),wp.getTipe(),0);
+        Intent intent = new Intent(this, TimeTable.class);
+        finish();
+        startActivity(intent);
+
     }
 
 }

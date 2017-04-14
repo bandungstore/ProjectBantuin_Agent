@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity  {
                 //AdapterUser.setName(name);
                 Toast.makeText(getBaseContext(), "Berhasil Login", Toast.LENGTH_LONG).show();
                 getDataByID(id_Agent);
-                myDB.updateRow(1,namaAgent,id_Agent,tipe);
+                myDB.updateRow(1,namaAgent,id_Agent,tipe,0);
                 //jika login user
                 if(tipe.equals("user")) {
                     Intent intent = new Intent(this, HomeAgent.class);
